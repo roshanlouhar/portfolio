@@ -23,7 +23,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Router>
+        <Router basename="portfolio" >
           <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <Link className="navbar-brand js-scroll-trigger" to="/">
               <span className="d-block d-lg-none">Roshan Louhar</span>
