@@ -10,20 +10,83 @@ import Skills from './Component/Skills';
 import Awards from './Component/Awards';
 import Interests from './Component/Interests';
 import Blogs from './Component/Blogs';
-import Github from './Component/GitHub'
+import Github from './Component/GitHub';
 
-{/* <HashRouter>
-        <MenuBar></MenuBar>
-        <Route path="/" component={App} exact />
-        <Route path="/blogs" component={Blogs} exact />
-        <Route path="/Github" component={Github} exact />
-    </HashRouter>*/}
+const routes = [
+  {
+    path: "/about",
+    exact: true,
+    sidebar: () => <div>About</div>,
+    main: () => <About></About>
+    
+  },
+  {
+    path: "/experience",
+    exact: true,
+    sidebar: () => <div>Experience!</div>,
+    main: () => <WorkExperience></WorkExperience>
+  },
+  {
+    path: "/education",
+    exact: true,
+    sidebar: () => <div>Education</div>,
+    main: () => <Education></Education>
+  },
+  {
+    path: "/skills",
+    exact: true,
+    sidebar: () => <div>Skills</div>,
+    main: () => <Skills></Skills>
+  },
+  {
+    path: "/certification",
+    exact: true,
+    sidebar: () => <div>Certification</div>,
+    main: () => <Certification></Certification>
+  },
+  {
+    path: "/awards",
+    exact: true,
+    sidebar: () => <div>Awards</div>,
+    main: () => <Awards></Awards>
+  },
+  {
+    path: "/interests",
+    exact: true,
+    sidebar: () => <div>Interests</div>,
+    main: () => <Interests></Interests>
+  },
+  {
+    path: "/blogs",
+    exact: true,
+    sidebar: () => <div>Blogs</div>,
+    main: () => <Blogs></Blogs>
+  },
+  {
+    path: "/github",
+    exact: true,
+    sidebar: () => <div>Github</div>,
+    main: () => <Github></Github>
+  },
+  {
+    path: "/",
+    exact: true,
+    sidebar: () => <div>Home</div>,
+    main: () => <About></About>
+  },
+  {
+    path: "*",
+    exact: false,
+    sidebar: () => <div>Not Found</div>,
+    main: () => <Notfound></Notfound>
+  }
+];
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        <Router basename="portfolio" >
+        <Router basename="portfolio">
           <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <Link className="navbar-brand js-scroll-trigger" to="/">
               <span className="d-block d-lg-none">Roshan Louhar</span>
@@ -34,7 +97,7 @@ class App extends React.Component {
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <div className="collapse navbar-collapse text-left" id="navbarSupportedContent">
 
               <ul className="navbar-nav">
                 <li className="nav-item">
@@ -73,39 +136,53 @@ class App extends React.Component {
               </div>
             </footer>
           </nav>
+
           <Switch>
-            <Route path="/about">
+            {routes.map((route, index) => (
+              // Render more <Route>s with the same paths as
+              // above, but different components this time.
+              <Route
+                key={index}
+                path={route.path}
+                exact={route.exact}
+                children={<route.main />}
+              />
+            ))}
+          </Switch>
+
+          {/* <Switch >
+            <Route exact path="/about">
               <About></About>
             </Route>
-            <Route path="/experience">
+            <Route exact path="/experience">
               <WorkExperience></WorkExperience>
             </Route>
-            <Route path="/education">
+            <Route exact path="/education">
               <Education></Education>
             </Route>
-            <Route path="/skills">
+            <Route exact path="/skills">
               <Skills></Skills>
             </Route>
-            <Route path="/certification">
+            <Route exact path="/certification">
               <Certification></Certification>
             </Route>
-            <Route path="/awards">
+            <Route exact path="/awards">
               <Awards></Awards>
             </Route>
-            <Route path="/interests">
+            <Route exact path="/interests">
               <Interests></Interests>
             </Route>
-            <Route path="/github">
+            <Route exact path="/github">
               <Github></Github>
             </Route>
-            <Route path="/blogs">
+            <Route exact path="/blogs">
               <Blogs></Blogs>
             </Route>
             <Route exact path="/">
               <About></About>
             </Route>
-            <Route component={Notfound} />
-          </Switch>
+            <Route path="*" component={Notfound} />
+         </Switch> */}
         </Router>
       </div>
     );

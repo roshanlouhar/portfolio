@@ -5,8 +5,7 @@ class Certification extends Component {
     render() {        
         return (<section className="resume-section p-3 p-lg-5 d-flex align-items-center" id="certification">
             <div className="w-100">
-                <h2 className="mb-4">Certifications </h2>
-                // eslint-disable-next-line
+                <h2 className="mb-4">Certifications </h2>                
                 <ul className="fa-ul mb-0">
                     <li>
                         <i className="fa-li fa fa-certificate text-warning"></i>

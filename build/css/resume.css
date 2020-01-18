@@ -13,7 +13,7 @@ body {
 @media (min-width: 992px) {
   body {
     padding-top: 0;
-    padding-left: 17rem;
+    padding-left: 16rem;
   }
 }
 
@@ -106,7 +106,7 @@ p.lead {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    width: 17rem;
+    width: 15rem;
     height: 100vh;
   }
   #sideNav .navbar-brand {
