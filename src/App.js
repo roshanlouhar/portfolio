@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link, useRouteMatch, useParams } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Notfound from './Component/NotFound'
 import About from './Component/About';
@@ -86,7 +86,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Router basename="portfolio">
+        <Router >
           <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <Link className="navbar-brand js-scroll-trigger" to="/">
               <span className="d-block d-lg-none">Roshan Louhar</span>

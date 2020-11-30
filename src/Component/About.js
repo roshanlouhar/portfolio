@@ -27,22 +27,22 @@ class About extends Component {
                         ✔ Open to discuss the consulting, software web/windows development project. you are just a ping away for the best solution.</p>
 
                     <p className="lead mb-4">Click on the link to download my resume
-                        <a target="_blank" href="~/Data/RoshanLouharSoftwareEngineerFullStack.pdf">pdf</a></p>
+                        <a target="_blank" rel="noopener noreferrer" href="~/Data/RoshanLouharSoftwareEngineerFullStack.pdf">pdf</a></p>
 
                     <div className="social-icons">
-                        <a target="_blank" href="https://www.linkedin.com/in/roshanlouhar/">
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/roshanlouhar/">
                             <i className="fab fa-linkedin-in"></i>
                         </a>
-                        <a target="_blank" href="https://github.com/roshanlouhar">
+                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/roshanlouhar">
                             <i className="fab fa-github"></i>
                         </a>
-                        <a target="_blank" href="https://twitter.com/roshanlouhar">
+                        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/roshanlouhar">
                             <i className="fab fa-twitter"></i>
                         </a>
-                        <a target="_blank" href="https://www.facebook.com/roshan.louhar">
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/roshan.louhar">
                             <i className="fab fa-facebook-f"></i>
                         </a>
-                        <a target="_blank" href="https://stackoverflow.com/users/9747843/roshan">
+                        <a target="_blank" rel="noopener noreferrer" href="https://stackoverflow.com/users/9747843/roshan">
                             <i className="fab fa-stack-overflow"></i>
                         </a>
                     </div>

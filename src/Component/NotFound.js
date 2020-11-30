@@ -1,9 +1,8 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import About from './About';
 
 class NotFound extends React.Component {
-  redirectToTarget = () => {
-    this.props.history.push(`/about`)
-  }
   
   render() {
     return (
@@ -18,8 +17,10 @@ class NotFound extends React.Component {
               <div className="error-details">
                 Sorry, an error has occured, Requested page not found!
                 </div>
-              <div className="error-actions">                
-                <a onClick={this.redirectToTarget} className="btn btn-primary btn-lg"><span className="glyphicon glyphicon-home"></span> Take Me Home </a>
+              <div className="error-actions">
+                <Router>
+                  <Link to={About} className="btn btn-primary btn-lg"><span className="glyphicon glyphicon-home"></span> Take Me Home </Link>
+                </Router>
               </div>
             </div>
           </div>
