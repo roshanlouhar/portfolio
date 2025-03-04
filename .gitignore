@@ -1,11 +1,8 @@
 
-.vs/slnx.sqlite
-.vs/portfolio/FileContentIndex/84c611d8-f5eb-45e8-b12a-86e1c19589d0.vsidx
-.vs/portfolio/CopilotIndices/17.13.433.20974/SemanticSymbols.db-wal
-.vs/portfolio/CopilotIndices/17.13.433.20974/SemanticSymbols.db-shm
-.vs/portfolio/CopilotIndices/17.13.433.20974/SemanticSymbols.db
-.vs/portfolio/CopilotIndices/17.13.433.20974/CodeChunks.db-wal
-.vs/portfolio/CopilotIndices/17.13.433.20974/CodeChunks.db-shm
-.vs/portfolio/CopilotIndices/17.13.433.20974/CodeChunks.db
-.vs/portfolio/config/applicationhost.config
-.vs/portfolio/FileContentIndex/31174775-bd31-4f69-8e06-8709c59ff3e9.vsidx
+*.db
+*.vsidx
+*.config
+.vs/portfolio/v17/.wsuo
+*.sqlite
+.vs/VSWorkspaceState.json
+.vs/portfolio/v17/DocumentLayout.json
